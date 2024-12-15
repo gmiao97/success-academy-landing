@@ -1,0 +1,84 @@
+---
+const features = [
+  {
+    title: "3ヶ月で1クール",
+    description: "当塾のカリキュラムは3ヶ月で1クール制です。3ヶ月で一年分の内容を学習します。一年で4回同じ内容を学習するので、自然と復習でき学習内容が定着しやすいです。"
+  },
+  {
+    title: "継続しやすい学習サポート",
+    description: "サクセス・アカデミーはフリーレッスン（グループレッスン）と個別レッスンをご用意しております。お子様に合わせて学習を継続しやすい環境を提供します。"
+  },
+  {
+    title: "英語でも学べます",
+    description: "個別レッスンでは英語で学ぶことも可能です。お子様の日本語レベルに合わせてレッスンをカスタマイズします。"
+  },
+  {
+    title: "学年の壁を越えて学習できる",
+    description: "フリーレッスン（グループレッスン）は、学年の壁を超えてクラス取り放題です。得意な科目は先取り学習にチャレンジできます。"
+  },
+  {
+    title: "世界中どこでも参加できる",
+    description: "現在、北米、ヨーロッパ、アジア・オーストラリアに向けてフリーレッスン（グループレッスン）を開催しております。世界のどこにいてもクラスに参加できます。"
+  },
+  {
+    title: "充実した保護者サポート",
+    description: "レッスンを受ける中でのご質問に限らず、子育てのお悩みにもご相談承っております。"
+  }
+];
+---
+
+<section class="features">
+  <h2>Comprehensive Learning Experience</h2>
+  <p>いつでも どこでも ハイクオリティな教育を。</p>
+  <div class="features-grid">
+    {features.map(feature => (
+      <div class="feature-card">
+        <h3>{feature.title}</h3>
+        <p>{feature.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+  }
+
+  h2 {
+    color: var(--primary-navy);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    color: var(--primary-navy);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .feature-card h3 {
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    color: var(--gray-text);
+    line-height: 1.6;
+  }
+</style> 

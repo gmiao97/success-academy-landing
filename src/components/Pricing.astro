@@ -1,0 +1,150 @@
+---
+import { pricingId } from '../constants';
+---
+
+<section id={pricingId} class="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing-cards">
+    <div class="pricing-card free">
+      <h3>Free Lesson</h3>
+      <ul>
+        <li>レッスンは全てライブ授業</li>
+        <li>言語のベースは日本語、対象は4歳から中学生。</li>
+        <li>内容は、どのお子様にも必ず必要とされる読み書き、計算。</li>
+        <li>たくさんの人が既に受講されている人気のカリキュラムを、どの国からでも参加可能。</li>
+      </ul>
+      <p class="price">$30<span>~/month</span></p>
+      <small>※月会費10USD別途</small>
+      <a href="#" class="pricing-button">Get Started</a>
+    </div>
+    
+    <div class="pricing-card premium">
+      <div class="recommended">Reccomended</div>
+      <h3>Private Lesson</h3>
+      <ul>
+        <li>お子様に合わせて1コマから受講可能</li>
+        <li>英語での指導もあり、文章題や作文など、より高度なメニューがあります</li>
+        <li>学校の宿題を手伝いなど、完全オーダーの個別もあります</li>
+        <li>フリーレッスン（集団授業）の予習復習もできます</li>
+      </ul>
+      <p class="price">$17<span>~/lesson</span></p>
+      <small>※月会費10USD別途</small>
+      <a href="#" class="pricing-button premium">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: 4rem 2rem;
+    background-color: var(--white);
+  }
+
+  h2 {
+    color: var(--primary-navy);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    background-color: var(--gray-light);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: left;
+    position: relative;
+  }
+
+  .pricing-card.premium {
+    background-color: var(--secondary-peach);
+  }
+
+  .recommended {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-orange);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  h3 {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .price {
+    font-size: 2rem;
+    color: var(--primary-navy);
+    font-weight: bold;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+
+  .price span {
+    font-size: 1rem;
+    color: var(--gray-text);
+  }
+
+  small {
+    display: block;
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+
+  li {
+    margin: 1rem 0;
+    color: var(--gray-text);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-orange);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+
+  .pricing-button {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-navy);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .pricing-button.premium {
+    background-color: var(--primary-orange);
+    color: var(--white);
+  }
+
+  .pricing-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+</style> 
