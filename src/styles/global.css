@@ -1,0 +1,130 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+:root {
+  /* Primary Colors */
+  --primary-orange: #FF7A3D;      /* Call-to-action buttons, highlights */
+  --primary-navy: #1B365D;        /* Headings, text */
+  
+  /* Secondary Colors */
+  --secondary-peach: #FFE4D6;     /* Background accent sections */
+  --secondary-light-orange: #FFF1EA; /* Light background sections */
+  
+  /* Neutral Colors */
+  --white: #FFFFFF;               /* Background, cards */
+  --black: #000000;               /* Text */
+  --gray-text: #666666;          /* Secondary text */
+  --gray-light: #F5F5F5;         /* Background, borders */
+  
+  /* Additional Colors */
+  --rating-yellow: #FFD700;      /* Star ratings */
+  --link-blue: #0066CC;          /* Links */
+}
+
+@font-face {
+  font-family: "NotoSansJP";
+  src: url("/fonts/NotoSansJP-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 400 700 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "NotoSansJP", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-size: 100% 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--text-primary);
+  font-size: 20px;
+  line-height: 1.7;
+}
+main {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3.052em;
+}
+h2 {
+  font-size: 2.441em;
+}
+h3 {
+  font-size: 1.953em;
+}
+h4 {
+  font-size: 1.563em;
+}
+h5 {
+  font-size: 1.25em;
+}
+strong,
+b {
+  font-weight: 700;
+}
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+p {
+  margin: 0;
+  white-space: pre-line;
+  word-break: break-all;
+  line-height: 1.25;
+}
+a:hover {
+  opacity: 0.8;
+}
+div {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style-type: disc;
+}
+code {
+  padding: 2px 5px;
+  background-color: rgb(var(--gray-light));
+  border-radius: 2px;
+}
+pre {
+  padding: 1.5em;
+  border-radius: 8px;
+}
+pre > code {
+  all: unset;
+}
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0 0 0 20px;
+  margin: 0px;
+  font-size: 1.333em;
+}
+hr {
+  border: none;
+  border-top: 1px solid rgb(var(--gray-light));
+  margin: 0;
+}
+@media (max-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+}

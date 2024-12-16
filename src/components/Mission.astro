@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import MissionImage from '../assets/top/mission.webp';
+---
+
+<section class="mission">
+    <div class="container">
+        <div class="image-container">
+            <Image src={MissionImage} alt="Students collaborating" />
+        </div>
+        <div class="content">
+            <span class="subtitle">Our Mission</span>
+            <h2>True Success For All</h2>
+            <p class="japanese-title">素直に、正直に、努力して 小悟を重ね、大志を成す</p>
+            
+            <div class="description">
+                <p>素直さ、正直さ、自助努力の精神は<br>
+                お子様が成長するときにとても大切な要素です。</p>
+
+                <p>『小悟』というのは『小さな悟り』<br>
+                つまり、毎日の小さな『わかった！』です。<br>
+                それを毎日毎日積み重ねると『大志』つまり『大きな志』<br>
+                お子様の夢や理想を実現する力となります。</p>
+
+                <p>私たちは目の前の「できる・できない」にとらわれず<br>
+                遠い未来にあるお子様の成功した姿を見たいと思っています。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .mission {
+        padding: 4rem 0;
+        background-color: var(--peach-bg, #FFE6D6);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .content {
+        padding: 2rem 0;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        color: var(--primary-navy, #0A2342);
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--primary-navy, #0A2342);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .japanese-title {
+        font-size: 1.5rem;
+        color: var(--primary-navy, #0A2342);
+        margin-bottom: 2rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+        color: var(--gray-text, #4A5568);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .content {
+            padding: 1rem 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        .japanese-title {
+            font-size: 1.25rem;
+        }
+    }
+</style> 
