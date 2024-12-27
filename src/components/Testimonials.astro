@@ -1,5 +1,9 @@
 ---
 import { Image } from 'astro:assets';
+import User1 from '../assets/top/user1.webp';
+import User2 from '../assets/top/user2.webp';
+import User3 from '../assets/top/user3.webp';
+
 ---
 
 <section class="testimonials">
@@ -14,9 +18,7 @@ import { Image } from 'astro:assets';
                 <p class="quote">「25分間のレッスンは、子どもが集中して取り組めるちょうど良い長さで、繰り返し学べる内容が定着を助けています。講師の方がたくさん褒めてくださるので、子どもも楽しみながらモチベーションを保っています。」</p>
                 <div class="author">
                     <div class="author-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0A2342" class="icon">
-                            <path d="M12 14c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6zm0-10c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 12c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4zm6 4H6v-.57c0-.81 2.5-2.43 6-2.43s6 1.62 6 2.43V20z"/>
-                        </svg>
+                        <Image src={User1} alt="User 1" />
                     </div>
                     <div class="author-info">
                         <p class="author-name">Aさん（ハワイ）</p>
@@ -31,9 +33,7 @@ import { Image } from 'astro:assets';
                 <p class="quote">「講師の皆さんは、子どもをよく観察して的確にサポートしてくださいます。どんな答えにも優しく対応していただけるので、安心して学べています。前回の内容を確認しながら進めてくれるのも助かっています。」</p>
                 <div class="author">
                     <div class="author-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0A2342" class="icon">
-                            <path d="M12 14c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6zm0-10c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 12c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4zm6 4H6v-.57c0-.81 2.5-2.43 6-2.43s6 1.62 6 2.43V20z"/>
-                        </svg>
+                        <Image src={User2} alt="User 2" />
                     </div>
                     <div class="author-info">
                         <p class="author-name">Bさん（ニューヨーク）</p>
@@ -48,9 +48,7 @@ import { Image } from 'astro:assets';
                 <p class="quote">「LINEでの対応が早く、気軽に質問できるのが嬉しいです。レッスンスケジュールも柔軟に調整していただけるので、忙しい生活の中でも無理なく続けられています。」</p>
                 <div class="author">
                     <div class="author-image">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0A2342" class="icon">
-                            <path d="M12 14c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6zm0-10c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 12c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4zm6 4H6v-.57c0-.81 2.5-2.43 6-2.43s6 1.62 6 2.43V20z"/>
-                        </svg>
+                        <Image src={User3} alt="User 3" />
                     </div>
                     <div class="author-info">
                         <p class="author-name">Cさん（イギリス）</p>
@@ -66,55 +64,59 @@ import { Image } from 'astro:assets';
 
 <style>
     .testimonials {
-        padding: 4rem 0;
+        padding: 64px 0;
         background-color: var(--white, #FFFFFF);
     }
 
     .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0 16px;
     }
 
     .header {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 48px;
     }
 
     .header h2 {
-        font-size: 2.5rem;
+        font-size: 40px;
         font-weight: bold;
         color: var(--primary-navy, #0A2342);
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
     }
 
     .header p {
-        font-size: 1.25rem;
-        color: var(--gray-text, #4A5568);
+        font-size: 20px;
+        color: var(--black, #4A5568);
     }
 
     .testimonials-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 32px;
     }
 
     .testimonial-card {
-        background-color: var(--peach-bg, #FFF8F3);
-        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--quaternary-bg);
+        padding: 32px;
         border-radius: 8px;
     }
 
     .quote {
-        color: var(--gray-text, #4A5568);
-        margin-bottom: 2rem;
-        line-height: 1.8;
+        color: var(--gray-dark);
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .author {
+        margin-top: 16px;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 16px;
     }
 
     .author-image {
@@ -162,7 +164,7 @@ import { Image } from 'astro:assets';
         }
 
         .header h2 {
-            font-size: 2rem;
+            font-size: 40px;
         }
     }
 </style> 
