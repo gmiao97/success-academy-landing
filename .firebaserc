@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "success-academy-5eed2"
+  },
+  "targets": {
+    "success-academy-5eed2": {
+      "hosting": {
+        "landing": [
+          "success-academy-landing"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
